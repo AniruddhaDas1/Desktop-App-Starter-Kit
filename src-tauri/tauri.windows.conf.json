@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "identifier": "com.example.desktopappstarterkit",
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Desktop App Starter Kit - Tauri",
+        "width": 1180,
+        "height": 760,
+        "minWidth": 900,
+        "minHeight": 600,
+        "resizable": true,
+        "visible": false,
+        "decorations": false,
+        "dragDropEnabled": true,
+        "backgroundColor": "#1a1a1e"
+      }
+    ]
+  }
+}

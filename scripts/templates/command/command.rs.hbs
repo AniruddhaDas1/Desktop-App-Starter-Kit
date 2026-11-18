@@ -1,0 +1,26 @@
+use serde::{Deserialize, Serialize};
+
+use crate::error::AppError;
+
+#[derive(Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct {{pcase action}}Request {
+    pub value: String,
+}
+
+#[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct {{pcase action}}Response {
+    pub success: bool,
+    pub echo: String,
+}
+
+/// Replaces the `{{domain}}:{{action}}` channel. Every command is async when it
+/// touches the network, the disk, or the OS; this stub does none of them.
+#[tauri::command]
+pub fn {{scase action}}(data: {{pcase action}}Request) -> Result<{{pcase action}}Response, AppError> {
+    Ok({{pcase action}}Response {
+        success: true,
+        echo: data.value,
+    })
+}

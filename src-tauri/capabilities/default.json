@@ -1,0 +1,7 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Every privileged operation goes through a Rust command, so the webview needs no plugin permissions beyond the core defaults. Call a Tauri plugin directly from JS and you must add its permission here.",
+  "windows": ["main"],
+  "permissions": ["core:default"]
+}
